@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Text Submission</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Dropzone CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="mb-4">Upload Your Files</h2>
+    <!-- Dropzone Form -->
+    <form action="/upload" class="dropzone mb-3" id="file-dropzone"></form>
+    
+    <!-- Text Input and Button -->
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="textInput">Your Text</label>
+            <input type="text" class="form-control" id="textInput" name="text" placeholder="Enter your text here">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Text</button>
+    </form>
+    <div id="answerBox" class="mt-4">
+        <h4>Model Answers:</h4>
+        <div id="answers" class="border p-3" style="min-height: 100px;">
+            <!-- Model answers will be displayed here -->
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Dropzone JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/min/dropzone.min.js"></script>
+<script>
+    // Dropzone configuration
+    Dropzone.options.fileDropzone = {
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: 2, // MB
+        dictDefaultMessage: "Drop files here to upload, or click to select one",
+    };
+</script>
+</body>
+</html>
