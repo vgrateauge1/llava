@@ -28,17 +28,16 @@ def index():
         question = request.form['text']
         if 'uploaded_file_path' in session:
             file_path = session['uploaded_file_path']
-            # Ici, vous pouvez associer `file_path` à `text` comme nécessaire
-            # Par exemple, enregistrer dans une base de données ou un fichier
-            question = f"{question} {file_path}"
-            # Optionnel : Supprimer le chemin du fichier de la session après l'utilisation
+            print(file_path)
+            jsonAnswer, message = analyze_image(file_path)
+
             session.pop('uploaded_file_path', None)
         else:
-            question = f"{question}"
+            message = askLlava(llava,question)
 
-        message = askLlava(llava,question)
-        print(question,message)
-        # You can process the message here if needed
+        
+        print(jsonAnswer)
+        # You can pro cess the message here if needed
     return render_template('index.html', message=message)
 
 @app.route('/upload', methods=['POST'])
