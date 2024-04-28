@@ -5,6 +5,9 @@ Welcome to our GitHub repository where we explore the innovative capabilities of
 ## Overview
 LLaVa-Next integrates advanced language and vision processing in a compact and efficient form, setting a new benchmark in AI technology. Unlike GPT-4, LLaVa-Next operates locally on devices, requiring less than 5GB and minimal hardware, showcasing its suitability for a wide range of applications without compromising privacy or security.
 
+![LLaVa model (1)](https://github.com/vgrateauge1/llava/assets/76152677/1ccabbb1-e582-43c6-8872-a72fdf50ec88)
+
+
 ## Key Highlights
 
 ### Compact and Efficient
