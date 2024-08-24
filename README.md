@@ -1,6 +1,6 @@
 # LLaVa-Next vs GPT-4 and Practical Use Cases
 
-Welcome to our GitHub repository where we explore the innovative capabilities of LLaVa-Next compared to GPT-4. This repository provides insights into the unique advantages and applications of LLaVa-Next, Meta AI's groundbreaking multimodal model.
+Welcome to my GitHub repository where I explore the innovative capabilities of LLaVa-Next compared to GPT-4. This repository provides insights into the unique advantages and applications of LLaVa-Next, Meta AI's groundbreaking multimodal model.
 
 ## Overview
 LLaVa-Next integrates advanced language and vision processing in a compact and efficient form, setting a new benchmark in AI technology. Unlike GPT-4, LLaVa-Next operates locally on devices, requiring less than 5GB and minimal hardware, showcasing its suitability for a wide range of applications without compromising privacy or security.
